@@ -24,32 +24,36 @@ A **Streamlit-based data analytics platform** with AI-powered insights, Automate
 
 ---
 
-📸 *Screenshots*
-
-*Data Upload Interface*
-<img width="1365" height="625" alt="image" src="https://github.com/user-attachments/assets/404e60b9-cd1c-458c-8dcc-8c6d04c45beb" />
-<img width="1226" height="624" alt="image" src="https://github.com/user-attachments/assets/ad448700-1cc3-4807-b781-8529b8bcebd2" />
+#📸 *Screenshots*
 
 
-*EDA (Exploratory Data Analysis*
-<img width="1336" height="627" alt="image" src="https://github.com/user-attachments/assets/d7eff697-a260-4a6e-b335-650d94f8ff73" />
-<img width="1355" height="623" alt="image" src="https://github.com/user-attachments/assets/79baf49e-294a-48e7-81b3-751a68b28b7a" />
+#*Data Upload Interface*
+
+<img width="1586" height="639" alt="image" src="https://github.com/user-attachments/assets/05d5aa18-e39f-4ff4-bd0a-8176b1e71279" />
+<img width="1545" height="538" alt="image" src="https://github.com/user-attachments/assets/803d33bf-2c44-456c-9749-10ddee119196" />
+<img width="1574" height="597" alt="image" src="https://github.com/user-attachments/assets/d42357ef-c9a5-453e-95d1-5f3bfc09bbb6" />
 
 
-*Analytics Dashboard*
-<img width="1312" height="591" alt="image" src="https://github.com/user-attachments/assets/d325dcd0-07bd-49f1-b086-87fd44f6d9e9" />
-<img width="663" height="546" alt="image" src="https://github.com/user-attachments/assets/36e7300d-65a7-4e5b-916b-42bf7fd837d9" />
-<img width="435" height="540" alt="image" src="https://github.com/user-attachments/assets/954c3267-c84b-4c6c-9918-f8c6d67a8bb5" />
-<img width="485" height="519" alt="image" src="https://github.com/user-attachments/assets/ce3c274e-71f1-40e9-b121-d895befc7c18" />
-<img width="1371" height="725" alt="image" src="https://github.com/user-attachments/assets/58ffdfd3-4ef4-42d0-848d-dd8a51398a1c" />
+#EDA (Exploratory Data Analysis*
+
+<img width="1558" height="751" alt="image" src="https://github.com/user-attachments/assets/d5a4e702-e876-4a0e-a04a-e7d802a88688" />
+<img width="1555" height="443" alt="image" src="https://github.com/user-attachments/assets/255c170a-7c74-4514-9f80-77d5e04d865a" />
 
 
 
+#Analytics Dashboard*
 
-*AI Chat Interface*
-<img width="1569" height="623" alt="image" src="https://github.com/user-attachments/assets/15624028-7284-47ee-b320-acd3d973553d" />
-<img width="1524" height="677" alt="image" src="https://github.com/user-attachments/assets/39f37246-405f-4e1f-ab54-894d5596fa50" />
+<img width="735" height="765" alt="image" src="https://github.com/user-attachments/assets/bd17488c-9a6a-45fd-bf0d-bf9e5924263c" />
+<img width="553" height="604" alt="image" src="https://github.com/user-attachments/assets/c49765a8-c4b4-4786-80f2-9bd868a774fc" />
+<img width="545" height="523" alt="image" src="https://github.com/user-attachments/assets/e19df432-35d2-4c45-a800-d76e0ad3853e" />
+<img width="975" height="707" alt="image" src="https://github.com/user-attachments/assets/3c6b4d8a-1ddb-477f-aafc-4e7450801b2e" />
 
+
+
+3AI Chat Interface*
+
+<img width="1141" height="702" alt="image" src="https://github.com/user-attachments/assets/1c842724-4f6a-49a0-b285-02753bc3dd9d" />
+<img width="1102" height="680" alt="image" src="https://github.com/user-attachments/assets/f94129cc-5aa8-4ec6-a114-bb373b6cfdd0" />
 
 
 ---
