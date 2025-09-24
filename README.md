@@ -24,19 +24,19 @@ A **Streamlit-based data analytics platform** with AI-powered insights, Automate
 
 ---
 
-📸 **Screenshots**
+📸 *Screenshots*
 
-**Data Upload Interface**
+*Data Upload Interface*
 <img width="1365" height="625" alt="image" src="https://github.com/user-attachments/assets/404e60b9-cd1c-458c-8dcc-8c6d04c45beb" />
 <img width="1226" height="624" alt="image" src="https://github.com/user-attachments/assets/ad448700-1cc3-4807-b781-8529b8bcebd2" />
 
 
-**EDA (Exploratory Data Analysis**
+*EDA (Exploratory Data Analysis*
 <img width="1336" height="627" alt="image" src="https://github.com/user-attachments/assets/d7eff697-a260-4a6e-b335-650d94f8ff73" />
 <img width="1355" height="623" alt="image" src="https://github.com/user-attachments/assets/79baf49e-294a-48e7-81b3-751a68b28b7a" />
 
 
-**Analytics Dashboard**
+*Analytics Dashboard*
 <img width="1312" height="591" alt="image" src="https://github.com/user-attachments/assets/d325dcd0-07bd-49f1-b086-87fd44f6d9e9" />
 <img width="663" height="546" alt="image" src="https://github.com/user-attachments/assets/36e7300d-65a7-4e5b-916b-42bf7fd837d9" />
 <img width="435" height="540" alt="image" src="https://github.com/user-attachments/assets/954c3267-c84b-4c6c-9918-f8c6d67a8bb5" />
@@ -46,7 +46,7 @@ A **Streamlit-based data analytics platform** with AI-powered insights, Automate
 
 
 
-**AI Chat Interface**
+*AI Chat Interface*
 <img width="1569" height="623" alt="image" src="https://github.com/user-attachments/assets/15624028-7284-47ee-b320-acd3d973553d" />
 <img width="1524" height="677" alt="image" src="https://github.com/user-attachments/assets/39f37246-405f-4e1f-ab54-894d5596fa50" />
 
