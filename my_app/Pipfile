@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+seaborn = "*"
+plotly = "*"
+ydata-profiling = "*"
+streamlit = "*"
+openpyxl = "*"
+google-generativeai = "*"
+huggingface-hub = "*"
+langchain = "*"
+langchain-huggingface = "*"
+transformers = "*"
+langchain-experimental = "*"
+openai = "*"
+requests = "*"
+streamlit-chat = "*"
+anthropic = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
