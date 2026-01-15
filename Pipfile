@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "*"
+streamlit-option-menu = "*"
+pandas = "*"
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+seaborn = "*"
+plotly = "*"
+groq = "*"
+openpyxl = "*"
+xlrd = "*"
+python-dotenv = "*"
+scikit-learn = "*"
+statsmodels = "*"
+typing-extensions = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
