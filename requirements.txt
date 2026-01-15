@@ -1,0 +1,32 @@
+# Core Framework
+streamlit
+streamlit-option-menu
+os
+
+# Data Processing
+pandas
+numpy
+scipy
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# AI Integration
+groq
+
+# File Processing
+openpyxl
+xlrd
+python-dotenv
+
+# Statistical Analysis
+scikit-learn
+statsmodels
+
+# Performance & Utilities
+typing-extensions
+groq
+python-dotenv
+
