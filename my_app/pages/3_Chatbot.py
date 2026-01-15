@@ -2,6 +2,7 @@ import os
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+import requests  # Use this instead of groq package
 
 # Page configuration
 st.set_page_config(
@@ -86,32 +87,6 @@ st.markdown("""
         box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
     }
     
-    .info-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
-        padding: 1.5rem;
-        border-radius: 20px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        margin: 1rem 0;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-    }
-    
-    .metric-card {
-        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-        color: #333;
-        padding: 1.2rem;
-        border-radius: 15px;
-        text-align: center;
-        margin: 0.5rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-    
-    .metric-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-    
     .stButton > button {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         color: white;
@@ -144,34 +119,11 @@ st.markdown("""
     .stButton > button:hover::before {
         left: 100%;
     }
-    
-    .sidebar-content {
-        background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin: 1rem 0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    /* Add some sparkle animations */
-    @keyframes sparkle {
-        0%, 100% { opacity: 0; transform: scale(0); }
-        50% { opacity: 1; transform: scale(1); }
-    }
-    
-    .sparkle {
-        position: absolute;
-        background: radial-gradient(circle, #fff, transparent);
-        border-radius: 50%;
-        pointer-events: none;
-        animation: sparkle 2s infinite;
-    }
 </style>
 """, unsafe_allow_html=True)
 
 # Load Groq API key
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 
 # Initialize session state
 if "chat_history" not in st.session_state:
@@ -197,7 +149,7 @@ with st.sidebar:
         st.success("✅ Groq API Key loaded")
     else:
         st.error("❌ No Groq API Key found")
-        st.info("Please set GROQ_API_KEY in your environment variables")
+        st.info("Please set GROQ_API_KEY in Streamlit Secrets")
     
     st.markdown("---")
     
@@ -251,42 +203,67 @@ with st.sidebar:
         st.session_state.chat_history = []
         st.rerun()
 
-# Initialize Groq client
+# Function to call Groq API directly using requests
+def ask_groq_api(user_question, df=None):
+    """Call Groq API directly without the groq package"""
+    
+    context = ""
+    if df is not None:
+        try:
+            # Get dataset summary
+            context = f"""
+            Dataset Summary:
+            - Shape: {df.shape}
+            - Columns: {list(df.columns)}
+            - Data types: {df.dtypes.to_dict()}
+            
+            Sample data (first 5 rows):
+            {df.head(5).to_string()}
+            
+            Statistical summary:
+            {df.describe().to_string()}
+            """
+        except Exception:
+            context = "Could not parse dataframe."
+    
+    # Prepare the API request
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "model": selected_model,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are a direct AI assistant. Give short, clear, straight-to-the-point answers. No lengthy explanations unless specifically asked. Be concise and factual."
+            },
+            {
+                "role": "user",
+                "content": f"Dataset Context:\n{context}\n\nUser Question: {user_question}"
+            }
+        ],
+        "temperature": temperature,
+        "max_tokens": max_tokens
+    }
+    
+    try:
+        response = requests.post(url, json=payload, headers=headers, timeout=30)
+        response.raise_for_status()  # Raise error for bad status codes
+        
+        data = response.json()
+        return data['choices'][0]['message']['content']
+        
+    except requests.exceptions.RequestException as e:
+        return f"Error calling Groq API: {str(e)}"
+    except (KeyError, IndexError) as e:
+        return f"Error parsing response: {str(e)}"
+
+# Main content area
 if GROQ_API_KEY:
-    client = Groq(api_key=GROQ_API_KEY)
-
-    def ask_groq(user_question, df=None):
-        context = ""
-        if df is not None:
-            try:
-                # Get dataset summary
-                context = f"""
-                Dataset Summary:
-                - Shape: {df.shape}
-                - Columns: {list(df.columns)}
-                - Data types: {df.dtypes.to_dict()}
-                
-                Sample data (first 5 rows):
-                {df.head(5).to_string()}
-                
-                Statistical summary:
-                {df.describe().to_string()}
-                """
-            except Exception:
-                context = "Could not parse dataframe."
-
-        response = client.chat.completions.create(
-            model=selected_model,
-            messages=[
-                {"role": "system", "content": "You are a direct AI assistant. Give short, clear, straight-to-the-point answers. No lengthy explanations unless specifically asked. Be concise and factual."},
-                {"role": "user", "content": f"Dataset Context:\n{context}\n\nUser Question: {user_question}"}
-            ],
-            temperature=temperature,
-            max_tokens=max_tokens
-        )
-        return response.choices[0].message.content
-
-    # Main content area
     col1, col2 = st.columns([2, 1])
     
     with col1:
@@ -351,7 +328,7 @@ if GROQ_API_KEY:
             with st.spinner("🤔 AI is thinking..."):
                 try:
                     df = st.session_state.get("df", None)
-                    reply = ask_groq(user_input, df=df)
+                    reply = ask_groq_api(user_input, df=df)
                     
                     # Add to chat history
                     timestamp = datetime.now().strftime("%H:%M:%S")
@@ -409,13 +386,11 @@ if GROQ_API_KEY:
         """)
 
 else:
-    st.error("⚠️ No GROQ_API_KEY found. Please set it in your environment.")
+    st.error("⚠️ No GROQ_API_KEY found. Please set it in Streamlit Secrets.")
     st.info("""
     To set up your API key:
     1. Get your API key from [Groq Console](https://console.groq.com)
-    2. Set environment variable: `export GROQ_API_KEY=your_api_key`
-    3. Restart the application
-
+    2. Go to your app settings on Streamlit Cloud
+    3. Add to Secrets: `GROQ_API_KEY = "your_key_here"`
+    4. Reboot the application
     """)
-
-
