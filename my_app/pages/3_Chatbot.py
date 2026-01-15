@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from groq import Groq
+from groq import groq
 import pandas as pd
 from datetime import datetime
 
@@ -416,4 +416,5 @@ else:
     1. Get your API key from [Groq Console](https://console.groq.com)
     2. Set environment variable: `export GROQ_API_KEY=your_api_key`
     3. Restart the application
+
     """)
