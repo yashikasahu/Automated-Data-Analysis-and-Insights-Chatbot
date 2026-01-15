@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from groq import groq
+from groq import Groq
 import pandas as pd
 from datetime import datetime
 
@@ -418,3 +418,4 @@ else:
     3. Restart the application
 
     """)
+
