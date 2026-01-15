@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 from io import StringIO
 import time
+import os
 #run requirements.txt to install all required libraries
 #set up env for GROQ_API_KEY
 
@@ -349,4 +350,5 @@ st.markdown("""
 <div style="text-align: center; color: #666; padding: 2rem 0;">
     <p>Built with ❤️ using Streamlit | Ready to transform your data into insights</p>
 </div>
+
 """, unsafe_allow_html=True)
