@@ -29,32 +29,29 @@ A **Streamlit-based data analytics platform** with AI-powered insights, Automate
 
 #*Data Upload Interface*
 
-<img width="1586" height="639" alt="image" src="https://github.com/user-attachments/assets/05d5aa18-e39f-4ff4-bd0a-8176b1e71279" />
-<img width="1545" height="538" alt="image" src="https://github.com/user-attachments/assets/803d33bf-2c44-456c-9749-10ddee119196" />
-<img width="1574" height="597" alt="image" src="https://github.com/user-attachments/assets/d42357ef-c9a5-453e-95d1-5f3bfc09bbb6" />
+<img width="1365" height="625" alt="Screenshot 2025-09-25 013619" src="https://github.com/user-attachments/assets/ba38375e-b30f-4d88-9e2b-4d7a9bf47522" />
+<img width="1226" height="624" alt="Screenshot 2025-09-25 013832" src="https://github.com/user-attachments/assets/0517a5b9-6f58-4c0a-9ab6-a080d14f9579" />
 
 
 #EDA (Exploratory Data Analysis*
 
-<img width="1558" height="751" alt="image" src="https://github.com/user-attachments/assets/d5a4e702-e876-4a0e-a04a-e7d802a88688" />
-<img width="1555" height="443" alt="image" src="https://github.com/user-attachments/assets/255c170a-7c74-4514-9f80-77d5e04d865a" />
-
+<img width="1336" height="627" alt="Screenshot 2025-09-25 013914" src="https://github.com/user-attachments/assets/b32086d9-3fe3-4150-8ddf-b2a67454c314" />
+<img width="1355" height="623" alt="Screenshot 2025-09-25 014011" src="https://github.com/user-attachments/assets/4963ce9e-7e10-4e03-ac66-f3d7e2f827a7" />
 
 
 #Analytics Dashboard*
 
-<img width="735" height="765" alt="image" src="https://github.com/user-attachments/assets/bd17488c-9a6a-45fd-bf0d-bf9e5924263c" />
-<img width="553" height="604" alt="image" src="https://github.com/user-attachments/assets/c49765a8-c4b4-4786-80f2-9bd868a774fc" />
-<img width="545" height="523" alt="image" src="https://github.com/user-attachments/assets/e19df432-35d2-4c45-a800-d76e0ad3853e" />
-<img width="975" height="707" alt="image" src="https://github.com/user-attachments/assets/3c6b4d8a-1ddb-477f-aafc-4e7450801b2e" />
-
+<img width="1312" height="591" alt="Screenshot 2025-09-25 014324" src="https://github.com/user-attachments/assets/0ec8e483-3988-4b4b-b090-bee66022ad37" />
+<img width="663" height="546" alt="Screenshot 2025-09-25 014600" src="https://github.com/user-attachments/assets/ec7c5166-b224-44b8-a947-e1eda2095c25" />
+<img width="435" height="540" alt="Screenshot 2025-09-25 014655" src="https://github.com/user-attachments/assets/c74064e4-dba9-4ee7-9ee9-5722f0efba67" />
+<img width="485" height="519" alt="Screenshot 2025-09-25 014727" src="https://github.com/user-attachments/assets/7807e8b4-1262-4729-af6a-d7f540dca0d0" />
+<img width="1371" height="725" alt="Screenshot 2025-09-25 014802" src="https://github.com/user-attachments/assets/8b92c776-4df7-4afd-8d0c-cea3f3dd0599" />
 
 
 3AI Chat Interface*
 
-<img width="1141" height="702" alt="image" src="https://github.com/user-attachments/assets/1c842724-4f6a-49a0-b285-02753bc3dd9d" />
-<img width="1102" height="680" alt="image" src="https://github.com/user-attachments/assets/f94129cc-5aa8-4ec6-a114-bb373b6cfdd0" />
-
+<img width="1564" height="728" alt="Screenshot 2025-09-25 014846" src="https://github.com/user-attachments/assets/1f830bba-90db-49b1-bc0c-19e23ba404f0" />
+<img width="1524" height="677" alt="Screenshot 2025-09-25 014954" src="https://github.com/user-attachments/assets/9fec29db-6f8b-4f43-9770-129d94b12d10" />
 
 ---
 
