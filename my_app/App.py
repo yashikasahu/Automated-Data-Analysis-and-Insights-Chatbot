@@ -179,7 +179,7 @@ with col2:
     
     uploaded_file = st.file_uploader(
         "",
-        type=["csv", "xlsx", "xls", "json"],
+        type=["csv", "xlsx", "xls"],
         help="Upload your data file to get started with analysis"
     )
 
@@ -352,3 +352,4 @@ st.markdown("""
 </div>
 
 """, unsafe_allow_html=True)
+
